@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--    <style name="FontMedium">-->
+<!--        <item name="android:textColor">@color/colorText</item>-->
+<!--        <item name="fontFamily">@font/red_hat_display_medium</item>-->
+<!--        <item name="android:fontFamily">@font/red_hat_display_medium</item>-->
+<!--    </style>-->
+
+<!--    <style name="FontBold">-->
+<!--        <item name="android:textColor">@color/colorText</item>-->
+<!--        <item name="fontFamily">@font/red_hat_display_bold</item>-->
+<!--        <item name="android:fontFamily">@font/red_hat_display_bold</item>-->
+<!--    </style>-->
+
+<!--    <style name="FontSemiBold">-->
+<!--        <item name="android:textColor">@color/colorText</item>-->
+<!--        <item name="fontFamily">@font/red_hat_display_semi_bold</item>-->
+<!--        <item name="android:fontFamily">@font/red_hat_display_semi_bold</item>-->
+<!--    </style>-->
+
+<!--    <style name="TextMedium10" parent="FontMedium">-->
+<!--        <item name="android:textSize">16sp</item>-->
+<!--    </style>-->
+
+<!--    <style name="TextMedium14" parent="FontMedium">-->
+<!--        <item name="android:textSize">14sp</item>-->
+<!--    </style>-->
+
+<!--    <style name="TextMedium18" parent="FontMedium">-->
+<!--        <item name="android:textSize">18sp</item>-->
+<!--    </style>-->
+
+<!--    <style name="TextBold16" parent="FontBold">-->
+<!--        <item name="android:textSize">16sp</item>-->
+<!--    </style>-->
+
+<!--    <style name="TextBold18" parent="FontBold">-->
+<!--        <item name="android:textSize">18sp</item>-->
+<!--    </style>-->
+
+<!--    <style name="TextBold20" parent="FontBold">-->
+<!--        <item name="android:textSize">20sp</item>-->
+<!--    </style>-->
+
+<!--    <style name="TextBold22" parent="FontBold">-->
+<!--        <item name="android:textSize">22sp</item>-->
+<!--    </style>-->
+
+<!--    <style name="TextBold26" parent="FontBold">-->
+<!--        <item name="android:textSize">26sp</item>-->
+<!--    </style>-->
+
+<!--    <style name="TextBold40" parent="FontBold">-->
+<!--        <item name="android:textSize">40sp</item>-->
+<!--    </style>-->
+
+<!--    <style name="TextSemiBold25" parent="FontSemiBold">-->
+<!--        <item name="android:textSize">25sp</item>-->
+<!--    </style>-->
+
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/navigation_home_watch_face">
+
+    <fragment
+        android:id="@+id/navigation_home_watch_face"
+        android:name="com.example.pockedex.ui.home.HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_open_details"
+            app:destination="@id/navigation_home_details"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_home_details"
+        android:name="com.example.pockedex.ui.details.DetailsPokemonFragment"
+        tools:layout="@layout/fragment_details_pokemon">
+
+        <action
+            android:id="@+id/action_navigation_home_details_to_navigation_home_watch_face"
+            app:destination="@id/navigation_home_watch_face"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+</navigation>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/backgroundMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.details.DetailsPokemonFragment">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:titleTextColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/toolbar_details" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/background_card"
+        android:paddingVertical="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageFilterView2">
+
+        <TextView
+            android:id="@+id/NamePokemon"
+            style="@style/CardTypePockemonAppearance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="70dp"
+            android:background="@drawable/bg_name_pokemon"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/text_type"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Charizard" />
+
+        <TextView
+            android:id="@+id/textType2"
+            style="@style/CardTypePockemonAppearance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/text_type"
+            app:layout_constraintTop_toTopOf="@+id/text_type"
+            tools:text="Fire" />
+
+        <TextView
+            android:id="@+id/text_type"
+            style="@style/CardTypePockemonAppearance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/textType2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/NamePokemon"
+            tools:text="Fire" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/imageHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/ic_height"
+            app:layout_constraintEnd_toStartOf="@+id/materialDivider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_type" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/imageWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_weight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/materialDivider"
+            app:layout_constraintTop_toTopOf="@+id/imageHeight" />
+
+        <TextView
+            android:id="@+id/text_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageHeight"
+            app:layout_constraintStart_toStartOf="@+id/imageHeight"
+            app:layout_constraintTop_toBottomOf="@+id/imageHeight"
+            tools:text="sadsdadasdas" />
+
+        <TextView
+            android:id="@+id/textWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageWeight"
+            app:layout_constraintStart_toStartOf="@+id/imageWeight"
+            app:layout_constraintTop_toBottomOf="@+id/imageWeight"
+            tools:text="sadsdadasdas" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/materialDivider"
+            android:layout_width="3dp"
+            android:layout_height="71dp"
+            android:layout_marginVertical="5dp"
+            android:layout_marginTop="8dp"
+            app:dividerColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/textWeight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_type" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/imageFilterView2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="68dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
