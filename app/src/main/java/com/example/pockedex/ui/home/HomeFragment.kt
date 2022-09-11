@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.widget.TextView
-import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AlertDialog
 import androidx.core.os.bundleOf
@@ -19,7 +18,6 @@ import com.example.pockedex.databinding.FragmentHomeBinding
 import com.example.pockedex.domain.Pokemon
 import com.example.pockedex.ui.adapter.PokemonAdapter
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
-import java.util.*
 
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(), TextView.OnEditorActionListener {
@@ -53,7 +51,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(), TextView.OnEditorActio
     }
 
     private fun createAdapter(it: List<Pokemon>) {
-        binding.aleatory.setOnClickListener {view->
+        binding.aleatory.setOnClickListener { view ->
             findNavController().navigate(
                 R.id.action_home_open_details,
                 bundleOf("pokemon" to it.random().name)
@@ -75,8 +73,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(), TextView.OnEditorActio
                 }
             })
     }
-    fun ClosedRange<Int>.random() =
-        Random().nextInt(endInclusive - start) +  start
+
     private fun createModal() {
         val builder: AlertDialog.Builder = AlertDialog.Builder(requireActivity())
         builder.setMessage(R.string.exit_app)

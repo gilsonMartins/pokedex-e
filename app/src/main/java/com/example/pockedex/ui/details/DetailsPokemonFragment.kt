@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.compose.ui.graphics.Color
 import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
@@ -35,8 +36,9 @@ class DetailsPokemonFragment : BaseFragment<FragmentDetailsPokemonBinding>() {
         if (arguments?.containsKey("pokemon") == true)
             viewModel.getPokemonInfo(arguments?.getString("pokemon", "")!!)
         val toolbar: Toolbar = binding.toolbar
+        toolbar.setBackgroundColor(ContextCompat.getColor(requireContext(),R.color.black))
 
-        toolbar.title = arguments?.getString("pokemon")
+        toolbar.title = arguments?.getString("pokemon")?.uppercase()
         toolbar.menu
         (activity as AppCompatActivity?)!!.setSupportActionBar(toolbar)
 
@@ -62,7 +64,7 @@ class DetailsPokemonFragment : BaseFragment<FragmentDetailsPokemonBinding>() {
         )
         Glide.with(requireContext()).load(response?.imageUrl)
             .into(binding.imageFilterView2)
-        this.NamePokemon.text = response?.name
+        this.NamePokemon.text = response?.name?.uppercase()
         if (response?.types?.size!! > 1) {
             binding.textType2.visibility = VISIBLE
             this.textType2.text =
